@@ -1,8 +1,14 @@
-# pry-byebug
+# pry-byebug-reloaded
 
 [![Version][VersionBadge]][VersionURL]
 [![Build][CIBadge]][CIURL]
 [![Inline docs][InchCIBadge]][InchCIURL]
+
+A version-relaxed fork of
+[pry-byebug-reloaded](https://github.com/deivid-rodriguez/pry-byebug) with some patches
+applied:
+
+* [pry-remote-pr]
 
 Adds step-by-step debugging and stack navigation capabilities to [pry] using
 [byebug].
@@ -29,7 +35,7 @@ MRI 3.2.0 or higher.
 Add
 
 ```ruby
-gem 'pry-byebug'
+gem 'pry-byebug-reloaded'
 ```
 
 to your Gemfile and run
@@ -73,7 +79,7 @@ current frame.
 
 ## Matching Byebug Behaviour
 
-If you're coming from Byebug or from Pry-Byebug versions previous to 3.0, you
+If you're coming from Byebug or from pry-byebug-reloaded versions previous to 3.0, you
 may be lacking the 'n', 's', 'c' and 'f' aliases for the stepping commands.
 These aliases were removed by default because they usually conflict with
 scratch variable names. But it's very easy to reenable them if you still want
@@ -130,8 +136,8 @@ Type `break --help` from a Pry session to see all available options.
 
 ## Alternatives
 
-Note that all of the alternatives here are incompatible with pry-byebug. If
-your platform is supported by pry-byebug, you should remove any of the gems
+Note that all of the alternatives here are incompatible with pry-byebug-reloaded. If
+your platform is supported by pry-byebug-reloaded, you should remove any of the gems
 mentioned here if they are present in your Gemfile.
 
 * [pry-debugger]: Provides step-by-step debugging for MRI 1.9.3 or older
@@ -150,14 +156,14 @@ See [Getting Started with Development](CONTRIBUTING.md).
 
 ## Funding
 
-Subscribe to [Tidelift] to ensure pry-byebug stays actively maintained, and at
+Subscribe to [Tidelift] to ensure pry-byebug-reloaded stays actively maintained, and at
 the same time get licensing assurances and timely security notifications for
 your open source dependencies.
 
-You can also help `pry-byebug` by leaving a small (or big) tip through [Liberapay].
+You can also help `pry-byebug-reloaded` by leaving a small (or big) tip through [Liberapay].
 
-[Tidelift]: https://tidelift.com/subscription/pkg/rubygems-pry-byebug?utm_source=rubygems-pry-byebug&utm_medium=referral&utm_campaign=readme
-[Liberapay]: https://liberapay.com/pry-byebug/donate
+[Tidelift]: https://tidelift.com/subscription/pkg/rubygems-pry-byebug-reloaded?utm_source=rubygems-pry-byebug-reloaded&utm_medium=referral&utm_campaign=readme
+[Liberapay]: https://liberapay.com/pry-byebug-reloaded/donate
 
 ## Security contact information
 
@@ -169,21 +175,23 @@ Tidelift will coordinate the fix and disclosure.
 ## Credits
 
 * Gopal Patel (@nixme), creator of [pry-debugger], and everybody who contributed
-  to it. pry-byebug is a fork of pry-debugger so it wouldn't exist as it is
+  to it. pry-byebug-reloaded is a fork of pry-debugger so it wouldn't exist as it is
   without those contributions.
 * John Mair (@banister), creator of [pry].
 
 Patches and bug reports are welcome.
 
 [pry]: https://pry.github.io
-[byebug]: https://github.com/deivid-rodriguez/byebug
+[byebug]: https://github.com/Jack12816/byebug
 [pry-debugger]: https://github.com/nixme/pry-debugger
 [pry-nav]: https://github.com/nixme/pry-nav
 [pry-stack_explorer]: https://github.com/pry/pry-stack_explorer
 
-[VersionBadge]: https://badge.fury.io/rb/pry-byebug.svg
-[VersionURL]: http://badge.fury.io/rb/pry-byebug
-[CIBadge]: https://github.com/deivid-rodriguez/pry-byebug/workflows/ubuntu/badge.svg?branch=master
-[CIURL]: https://github.com/deivid-rodriguez/pry-byebug/actions?query=workflow%3Aubuntu
-[InchCIBadge]: http://inch-ci.org/github/deivid-rodriguez/pry-byebug.svg?branch=master
-[InchCIURL]: http://inch-ci.org/github/deivid-rodriguez/pry-byebug
+[VersionBadge]: https://badge.fury.io/rb/pry-byebug-reloaded.svg
+[VersionURL]: http://badge.fury.io/rb/pry-byebug-reloaded
+[CIBadge]: https://github.com/Jack12816/pry-byebug-reloaded/workflows/ubuntu/badge.svg?branch=master
+[CIURL]: https://github.com/Jack12816/pry-byebug-reloaded/actions?query=workflow%3Aubuntu
+[InchCIBadge]: http://inch-ci.org/github/Jack12816/pry-byebug-reloaded.svg?branch=master
+[InchCIURL]: http://inch-ci.org/github/Jack12816/pry-byebug-reloaded
+
+[pry-remote-pr]: https://github.com/deivid-rodriguez/pry-byebug/pull/339

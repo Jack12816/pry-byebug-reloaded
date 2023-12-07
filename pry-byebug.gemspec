@@ -3,12 +3,12 @@
 require File.dirname(__FILE__) + "/lib/pry-byebug/version"
 
 Gem::Specification.new do |gem|
-  gem.name = "pry-byebug"
+  gem.name = "pry-byebug-reloaded"
   gem.version = PryByebug::VERSION
   gem.authors = ["David Rodríguez", "Gopal Patel"]
   gem.email = "deivid.rodriguez@gmail.com"
   gem.license = "MIT"
-  gem.homepage = "https://github.com/deivid-rodriguez/pry-byebug"
+  gem.homepage = "https://github.com/Jack12816/pry-byebug-reloaded"
   gem.summary = "Fast debugging with Pry."
   gem.description = "Combine 'pry' with 'byebug'. Adds 'step', 'next', 'finish',
     'continue' and 'break' commands to control execution."
@@ -19,10 +19,10 @@ Gem::Specification.new do |gem|
   gem.executables = []
 
   gem.metadata = {
-    "bug_tracker_uri" => "https://github.com/deivid-rodriguez/pry-byebug/issues",
-    "changelog_uri" => "https://github.com/deivid-rodriguez/pry-byebug/blob/HEAD/CHANGELOG.md",
-    "source_code_uri" => "https://github.com/deivid-rodriguez/pry-byebug",
-    "funding_uri" => "https://liberapay.com/pry-byebug"
+    "bug_tracker_uri" => "https://github.com/Jack12816/pry-byebug-reloaded/issues",
+    "changelog_uri" => "https://github.com/Jack12816/pry-byebug-reloaded/blob/HEAD/CHANGELOG.md",
+    "source_code_uri" => "https://github.com/Jack12816/pry-byebug-reloaded",
+    "funding_uri" => "https://liberapay.com/pry-byebug-reloaded"
   }
 
   # Dependencies

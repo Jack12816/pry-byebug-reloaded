@@ -29,6 +29,7 @@ module PryRemoteReloaded
       original_teardown
 
       return if @torn
+
       PryByebug.current_remote_server = nil
       @torn = true
     end
