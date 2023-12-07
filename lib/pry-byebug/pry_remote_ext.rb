@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-require "pry-remote"
+require "pry-remote-reloaded"
 
-module PryRemote
+module PryRemoteReloaded
   #
   # Overrides PryRemote::Server
   #
@@ -11,28 +11,27 @@ module PryRemote
     # Override the call to Pry.start to save off current Server, and not
     # teardown the server right after Pry.start finishes.
     #
+    alias original_run run
     def run
       raise("Already running a pry-remote session!") if
         PryByebug.current_remote_server
 
       PryByebug.current_remote_server = self
 
-      setup
-      Pry.start @object, input: client.input_proxy, output: client.output
+      catch(:breakout_nav) { original_run }
     end
 
     #
     # Override to reset our saved global current server session.
     #
-    alias teardown_without_pry_byebug teardown
-    def teardown_with_pry_byebug
-      return if @torn
+    alias original_teardown teardown
+    def teardown
+      original_teardown
 
-      teardown_without_pry_byebug
+      return if @torn
       PryByebug.current_remote_server = nil
       @torn = true
     end
-    alias teardown teardown_with_pry_byebug
   end
 end
 
