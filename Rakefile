@@ -1,14 +1,8 @@
 # frozen_string_literal: true
 
 require "bundler/gem_tasks"
-require "chandler/tasks"
 require "rake/testtask"
 require "rubocop/rake_task"
-
-#
-# Add chandler as a prerequisite for `rake release`
-#
-task "release:rubygem_push" => "chandler:push"
 
 desc "Run tests"
 Rake::TestTask.new(:test) do |t|
